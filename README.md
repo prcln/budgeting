@@ -15,7 +15,7 @@ This Python-based Budget Management System allows you to automate data managemen
 - `gspread` for Google Sheets API
 - `oauth2client` for authentication
 - `Pillow` for image processing
-
+- **Google Sheet's Template**: https://docs.google.com/spreadsheets/d/1hDWc7cJiNV0vXtX62xNyW0n2XkN7IeXt9QCDL_VzgKU/edit?usp=sharing
 ## Setup
 
 1. **Clone the Repository**

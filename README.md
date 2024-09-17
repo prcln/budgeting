@@ -54,11 +54,11 @@ python your_script_name.py
 
 Follow the on-screen prompts to:
 
-Retrieve data from a sheet
-Generate a PNG from sheet data
-Process and split money data
-Clear all sheets
-List available worksheets
-Insert a new transaction
-Delete a row
-Undo the last action
+- Retrieve data from a sheet
+- Generate a PNG from sheet data
+- Process and split money data
+- Clear all sheets
+- List available worksheets
+- Insert a new transaction
+- Delete a row
+- Undo the last action

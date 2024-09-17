@@ -34,8 +34,8 @@ pip install gspread oauth2client pillow
 ```
 3. **Google Sheets API Credentials**
 
-Follow this guide to create a Google Sheets API project and obtain credentials.json.
-Place the credentials.json file in the project directory.
+- Follow this guide to create a Google Sheets API project and obtain credentials.json.
+- Place the credentials.json file in the project directory.
 
 4. **Update Spreadsheet URL**
 

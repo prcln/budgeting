@@ -79,14 +79,14 @@ def update_data():
     client = gspread.authorize(creds)
 
     # Open the spreadsheet
-    spreadsheet = client.open_by_url("https://docs.google.com/spreadsheets/d/1sV69_KQ_l04838az9-gKw8XlYelpNWO9UHtQVL7_NM8/edit?gid=1732160294#gid=1732160294")
+    spreadsheet = client.open_by_url("Your Sheet's URL")
 
-    # Access the sheets
+    # Access the sheets, change [Person1] into your worksheet's name
     transactions_sheet = spreadsheet.worksheet("Transactions")
-    Person1_sheet = spreadsheet.worksheet("Jar")
-    Person2_sheet = spreadsheet.worksheet("Jo")
-    Person3_sheet = spreadsheet.worksheet("Befot")
-    Person4_sheet = spreadsheet.worksheet("Hung")
+    Person1_sheet = spreadsheet.worksheet("[Person1]")
+    Person2_sheet = spreadsheet.worksheet("[Person2]")
+    Person3_sheet = spreadsheet.worksheet("[Person3]")
+    Person4_sheet = spreadsheet.worksheet("[Person4]")
 
     # Define expected headers for Transactions sheets
     expected_transactions_headers = ["ID", "Date", "Amount", "Description", "Category", "Note", "Person1", "Person2", "Person3", "Person4", "Number of people", "Split amount"]
@@ -179,10 +179,10 @@ def generate_id(date_str, current_row_number):
 def find_first_empty_row():
     all_rows = transactions_sheet.get_all_values()[4:]  # Start after the headers
 
-    for idx, row in enumerate(all_rows, start=5):  # Start counting from row 5
+    for i, row in enumerate(all_rows, start=5):  # Start counting from row 5
         # Check if critical fields (Date, Amount, Description) are empty
         if len(row) < 3 or not row[1] or not row[2] or not row[3]:
-            return idx  # Return the index of the first empty row
+            return i  # Return the index of the first empty row
     
     # If no empty row is found, return the next available row
     return len(all_rows) + 5

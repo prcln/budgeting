@@ -287,18 +287,6 @@ def undo_last_action():
     
     print("No actions available to undo.")
 
-def print_menu():
-    print("\nMenu:")
-    print(". Retrieve data from a sheet")
-    print("1. Generate PNG from sheet data")
-    print("2. Process and split money data")
-    print("3. Clear all sheets")
-    print("4. List available worksheets")
-    print("5. Insert a new transaction")
-    print("6. Delete a row")
-    print("7. Undo last action")
-    print("8. Exit")
-
 #Menu for the script
 def print_menu():
     print("\nMenu:")
